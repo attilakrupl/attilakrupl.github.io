@@ -12,5 +12,9 @@ To go over HTML
 
 They say CSS supposed to cheer ya.
 
-But I ain't done much styling.
+But I ain't done much styling...
+
+
+This is my new respository. You will find my redesigned CV here within the next couple of days. 
+
 
