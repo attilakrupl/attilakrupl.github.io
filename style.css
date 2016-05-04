@@ -1,0 +1,70 @@
+body {
+  margin: 0px;
+  /*font-family: Merriweather;*/
+  font-size: 20px;
+}
+
+
+a {
+  font-weight: bold;
+  text-decoration: underline;
+  color: rgba(0, 0, 0, 0.99);
+  font-weight: lighter;
+}
+
+.question {
+  font-weight: bold;
+}
+
+
+article {
+  font-style: italic;
+}
+
+p {
+  color: rgba(0, 0, 0, 0.8);
+  letter-spacing: .036em;
+  line-height: 30px;
+  font-style: "Times New Roman";
+
+}
+
+.dotdotdot {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+  color: #222222;
+  font-size: 32px;
+  font-family: arial;
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 0px;
+  margin-top: 60px;
+  /*font-family: medium-content-sans-serif-font,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif;*/
+}
+
+h2 {
+  text-align: center;
+  color: rgba(0,0,0,.44);
+  font-size: 26px;
+  font-weight: lighter;
+  font-family: arial;
+  margin-top: 0px;
+  /*font-family: medium-content-sans-serif-font,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif;*/
+}
+
+div {
+  width: 50%;
+  margin: 0 auto;
+
+}
+
+.image_div {
+  width: 100%;
+}
+
+.image_big {
+  width: 100%;
+}
