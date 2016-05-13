@@ -1,0 +1,339 @@
+
+body {
+  height: 100%;
+  margin: 0;
+  padding-left: 0;
+  font-family: sans-serif;
+}
+
+    .outer {
+      width: 100%;
+      display: flex;
+      background-color: rgb(246,246,246);
+      }
+
+        .corner {
+          height: 80px;
+          width: 176px;
+          background: linear-gradient(white 50%, rgb(246,246,246) );
+        }
+
+        aside {
+          width: 176px;
+          background: rgb(246,246,246);
+          font-size: 12px;
+          }
+
+
+            .as-inner {
+              width: 166px;
+            }
+
+                .as-inner-00 {
+                  padding-bottom: 25px;
+                  height: 85px;
+                  }
+
+                    .logo {
+                      width: 130px;
+                      padding: 10px 15px 10px 25px;
+                      transform: translateY(-75px);
+                    }
+
+                 .as-inner-01 {
+                   padding: 4px 0 4px 10px;
+                   border-bottom: rgb(216,216,216) solid 1px;
+                   width: 176px;
+                 }
+
+                 .lan {
+                   padding: 4px 0 4px 10px;
+                   border-bottom: none;
+                 }
+
+                    .as-inner-01-link {
+                      margin-left: 10px;
+                      padding-left: 10px;
+                      padding-top: 5px;
+                    }
+
+                    /*Apply this styling for all the links in the sidebar: */
+
+                      .as-inner-01-link a {
+                      text-decoration: none;
+                      color: rgb(6, 69, 173);
+                    }
+
+                    .as-inner-01-link a:hover {
+                      text-decoration: underline;
+                    }
+
+                    .as-inner-01-link a:visited {
+                      color: rgb(11, 0, 128);
+                    }
+
+                    .side-title {
+                      font-size: 12px;
+                      font-weight: normal;
+                      color: rgb(77, 77, 77);
+                      margin: 0 0 0 15px;
+                      padding: 3px 0 3px 3px;
+
+                    }
+
+                    .as-inner-01-link-v2 {
+                       margin-left: 20px;
+                     }
+
+        .right-col {
+          font-size: 14px;
+        }
+
+            header {
+
+              background: linear-gradient(white 50%, rgb(246,246,246) ) ;
+              height: 80px;
+              border-bottom:  rgb(167,215,249) solid 1px;
+              border-left: rgb(167,215,249) solid 1px;
+              position: relative;
+            }
+
+                .hea01 {
+                    position: absolute;
+                }
+
+                .left-bott {
+                  left: 0;
+                  bottom: 0;
+                }
+
+                .left-bott, .right-bott, .right-top {
+                  margin: 0;
+                  padding: 0;
+
+                }
+
+                .as-inner-01-link ul li {
+                  list-style: none;
+                  display: inline;
+                  border-right: 1px solid rgb(167,215,249);
+                  padding: 5px 0;
+                }
+
+                .right-top ul li{
+                  float: right;
+                  border: none;
+                  top: 0px;
+                  right: 0px;
+                }
+
+
+                .nav-line {
+                  display: inline-block;
+                }
+
+
+                .as-inner-01-link ul {
+                  padding: 5px 0 5px 0;
+                  margin: 0;
+                }
+
+                    a.header-link1 {
+                      padding: 16px 6px 0px 6px;
+                    }
+
+                    a.header-link2 {
+                      padding: 0px 6px;
+                    }
+
+                .right-top {
+                  right: 0px;
+                  top: 0px;
+                }
+
+                .right-bott {
+                  right: 0px;
+                  bottom: -13px;
+                  max-height: 40px;
+                }
+
+                .search-bar {
+                  width: 400px;
+                  height: 22px;
+                }
+
+
+            main {
+              background-color: white;
+              border-left: rgb(167,215,249) solid 1px;
+              border-bottom: rgb(167,215,249) solid 1px;
+            }
+
+                .m-inner {
+                  padding: 16px;
+                  line-height: 22px;
+                }
+
+                .section-title {
+                  border-bottom: 1px solid rgb(170,170,170);
+                  font-family: "Times New Roman";
+                  font-size: 15px;
+                  margin-bottom: 7px;
+
+                }
+
+                    .name {
+                      margin: 0px;
+                      line-height: 37px;
+                      font-weight: lighter;
+                    }
+
+                .from-wiki {
+                  font-size: 12.88px;
+                }
+
+                .hatnote {
+                  font-style: italic;
+                  padding: 15px 0 0 22px;
+                  margin-bottom: 7px;
+                }
+
+                .biography {
+                  background-color: rgb(249, 249, 249);
+                  border: rgb(170, 170, 170) solid 1px;
+                  clear: right;
+                  display: table;
+                  float: right;
+                  font-size: 12.32px;
+                  height: 513px;
+                                    margin: 6px 0 6px 12px;
+                  padding: 2.46px;
+                  width: 264px;
+                }
+
+
+                    .bio-pic {
+                      height: 277px;
+                      width: 220px;
+                      margin: 0 auto;
+                    }
+
+                    .subscr {
+                      text-align: center;
+                    }
+
+                p:first-child {
+                  margin: 0;
+                }
+
+                .content-list {
+                  width: 125px;
+                  background-color: rgb(249, 249, 249);
+                  border: rgb(170, 170, 170) solid 1px;
+                }
+
+                .con-list-inner {
+                  padding-left: 8px;
+                  font-size: 13px;
+                }
+
+                .cont-title {
+                  font-size: 13px;
+                  padding-left: 5px;
+                  margin: 5px 0;
+                }
+
+                .content-list ul {
+                  padding: 0 0 5px 0;
+                  margin: 0;
+                }
+
+                .content-list ul li {
+                  list-style: none;
+                  padding: 0;
+                }
+
+                .content-link1 {
+                  text-decoration: none;
+                  color: rgb(6, 69, 173);
+                }
+
+                .content-link1:hover {
+                  text-decoration: underline;
+                }
+
+                .content-text {
+                  padding-left: 30px;
+                }
+
+                .subsection-name {
+                  margin: 21px 0 5px 0;
+                  line-height: 27px;
+                  font-size: 21px;
+                  font-weight: lighter;
+                }
+
+                sup {
+                  line-height: normal;
+                }
+
+                .indented-par {
+                  padding-left: 45px;
+                  padding-right: 45px;
+                }
+
+                .indented-par2 {
+                  padding-left: 65px;
+                  padding-right: 45px;
+                }
+
+                .ita-sp {
+                  font-style: italic;
+                }
+
+                .image-container {
+                  float: right;
+                  width: 230px;
+                  background-color: rgb(249, 249, 249);
+                  border: rgb(170, 170, 170) solid 1px;
+                  font-size: 14px;
+                  box-sizing: border-box;
+                  padding: 5px;
+                  margin: 5px;
+                }
+
+                .pers-extra {
+                  overflow: hidden;
+                  margin-right: 30px;
+                }
+
+                .flexed {
+                  height: 351px;
+                }
+
+                .body-pic {
+                  width: 220px;
+                }
+
+                .flex-this {
+                  display: flex;
+                }
+
+        footer {
+          font-size: 12px;
+          padding-left: 195px;
+          background-color: rgb(246, 246, 246);
+          padding-top: 25px;
+          height: 300px;
+          }
+
+            .footer-links {
+              padding: 5px 0;
+              margin: 0;
+            }
+
+            .footer-links li {
+              list-style: none;
+              display: inline;
+              padding: 5px 5px;
+            }
