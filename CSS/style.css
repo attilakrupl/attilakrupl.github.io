@@ -1,0 +1,16 @@
+body{
+  width: 100%;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-image: url("../images/trees.jpg");
+  background-repeat: no-repeat;
+}
+
+img {
+  max-width: 100%;
+}
