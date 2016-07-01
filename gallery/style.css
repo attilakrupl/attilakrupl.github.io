@@ -1,0 +1,96 @@
+header, footer, main {
+    display: flex;
+    width: 700px;
+    margin: 0 auto;
+}
+
+aside {
+    width: 50px;
+    height: auto;
+    display: flex;
+}
+
+.content, .content2 {
+  width: 600px;
+}
+
+header, main {
+  border-bottom: 1px solid black;
+}
+
+header {
+    height: 80px;
+}
+
+main {
+    height: 450px;
+}
+
+footer {
+    height: 120px
+}
+
+h1, p {
+    margin: 0;
+    padding: 5px 0 0 5px;
+    font-family: 'Cinzel', serif;
+}
+
+p {
+  font-weight: bold;
+}
+
+.fbox {
+    margin: auto;
+}
+
+button {
+    height: 50px;
+    width: 50px;
+    border: 0;
+    background-color: rgba(0,0,0,0);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+button:focus{
+  outline:0;
+}
+
+#button3, #button4 {
+    background-size: 50% 50%;
+}
+
+#button3 {
+  margin-left: 25px;
+}
+
+.right-arrow {
+    background-image: url(rescources/ar.png);
+}
+
+.left-arrow {
+    background-image: url(rescources/al.png);
+}
+
+.content2 {
+  height: inherit;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.highlighted {
+  border: 3px solid #0099FF;
+}
+
+.main-image {
+  max-height: 97%;
+}
+
+.thumbnail {
+  max-width: 110px;
+  max-height: 90px;
+  align-content: center;
+  padding-left: 5px;
+  padding-right: 5px;
+}
