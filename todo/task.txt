@@ -1,0 +1,7 @@
+<div class="task" id=???>
+  <div class="todo-item"><p>???</p></div>
+  <div class="img_cont">
+    <div><button class="bin" alt="bin"></button></div>
+    <div><button class="???" alt="done"></button></div>
+  </div>
+</div>
