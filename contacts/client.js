@@ -53,7 +53,6 @@ function myRequest(method, url, data, cb) {
   const xhr = new XMLHttpRequest();
   xhr.open(method, url);
   xhr.setRequestHeader('content-type', 'application/json; charset=utf-8');
-  updateJson();
   xhr.onload = () => {
     cb(xhr.responseText);
   };
