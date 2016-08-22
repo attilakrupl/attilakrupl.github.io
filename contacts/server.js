@@ -8,8 +8,7 @@ const cors = require('cors');
 const app = express();
 app.use(bodyParser.json());
 app.use(express.static('/'));
-app.use(express.static('/client/css'));
-app.use(express.static('/client/js'));
+app.use(express.static('/img'));
 app.use(cors());
 
 app.get('/', cors(), (req, res) => {

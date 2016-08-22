@@ -4,7 +4,7 @@ const graphButton = document.querySelector('#graphButton');
 const addButton = document.querySelector('#addButton');
 const okButton = document.querySelector('#okButton');
 const cancelButton = document.querySelector('#cancelButton');
-const path = 'http://127.0.0.1:3000/';
+const path = 'http://localhost:3000/';
 
 let contactsArray = [];
 
