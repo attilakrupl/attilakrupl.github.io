@@ -1,0 +1,207 @@
+body {
+  position: absolute;
+  width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  background-color: white;
+  padding: 10px 0 0 20px;
+  font-weight: bold;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+}
+
+header button {
+  margin-right: 50px;
+}
+
+button {
+  margin-top: 10px;
+  height: 35px;
+  width: 70px;
+  background-color: white;
+  box-shadow: 3px 3px 3px #888888;
+  font-weight: bold;
+
+}
+
+main {
+  padding: 10px 0 60px 0;
+}
+
+p {
+  margin: 5px 0 5px 0;
+}
+
+table {
+  margin-top: 50px;
+  border: solid 1px black;
+  width: 95%;
+  border-spacing: 0;
+}
+
+th {
+  background-color: #AAAAAA;
+}
+
+th, td {
+  padding: 0 10px 0 10px;
+  border-right: 1px black solid;
+}
+
+tr:nth-child(2) {
+  height: 3px;
+}
+
+th:first-child, td:first-child  {
+  width: 50%;
+}
+
+th:first-child, th:nth-child(3), td:first-child, th:nth-child(3) {
+  text-align: left;
+}
+
+th:nth-child(2), td:nth-child(2) {
+  text-align: right;
+  width: 10%;
+}
+
+th:nth-child(3), td:nth-child(3) {
+  width: 20%;
+}
+
+th:nth-child(4), td:nth-child(4) {
+  text-align: center;
+  width: 10%;
+}
+
+th:nth-child(5), td:nth-child(5) {
+  text-align: center;
+  width: 10%;
+  border: none;
+}
+
+tr:nth-child(odd) {
+  background-color: #EEEEEE;
+}
+
+tr:nth-child(even) {
+  background-color: white;
+}
+
+textarea {
+  width: 95%;
+  height: 80px;
+  resize: none;
+  border: solid black 1px;
+  box-sizing: border-box;
+}
+
+.employee {
+  background-image: url("/img/checked.png");
+}
+
+.boss {
+    background-image: url("/img/unchecked.png");
+}
+
+.boss, .employee {
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position:center;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.addNewContact, .graph {
+  border: 1px black solid;
+  width: 500px;
+  height: 320px;
+  position: fixed;
+  background-color: white;
+}
+
+.addNewContact {
+  top: 260px;
+}
+
+.graph {
+  left: 25%;
+}
+
+#graphInvisible {
+  top: -600px;
+  -webkit-transition: top 500ms;
+  transition: top 500ms;
+
+}
+
+#graphVisible {
+  top: 260px;
+  -webkit-transition: top 500ms;
+  transition: top 500ms;
+}
+
+#addNewContactVisible {
+  left: 25%;
+  -webkit-transition: left 500ms;
+  transition: left 500ms;
+}
+
+#addNewContactInvisible {
+  left: -125%;
+  -webkit-transition: left 500ms;
+  transition: left 500ms;
+}
+
+.addNewContact form {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputFields {
+  width: 200px;
+
+}
+
+.addNewContact form div div {
+  margin: 11px;
+}
+
+.addNewContact form div input {
+  margin: 5px;
+  width: 190px;
+}
+
+#employee {
+  width: 20px;
+}
+
+.formFields {
+  margin: 11px;
+  display: flex;
+  flex-direction: row;
+}
+
+.formButtons {
+  display: flex;
+  flex-direction: row;
+  width: 400px;
+}
+
+form div button {
+  margin: 0 60px 0 60px;
+  background-color: white;
+  box-shadow: 3px 3px 3px #888888;
+  font-weight: bold;
+}
