@@ -4,7 +4,7 @@ const graphButton = document.querySelector('#graphButton');
 const addButton = document.querySelector('#addButton');
 const okButton = document.querySelector('#okButton');
 const cancelButton = document.querySelector('#cancelButton');
-const path = 'http://localhost:3000/names';
+const path = 'http://127.0.0.1:3000/';
 
 let contactsArray = [];
 
@@ -53,6 +53,7 @@ function myRequest(method, url, data, cb) {
   const xhr = new XMLHttpRequest();
   xhr.open(method, url);
   xhr.setRequestHeader('content-type', 'application/json; charset=utf-8');
+  updateJson();
   xhr.onload = () => {
     cb(xhr.responseText);
   };
@@ -82,7 +83,6 @@ function deleteName() {
   const dump = document.querySelector('textarea');
   dump.textContent += 'Contact deleted: ' + JSON.stringify(contactsArray[event.target.id]) + '\n';
   contactsArray.splice(event.target.id, 1);
-  updateJson();
 }
 
 function openAddPanel() {

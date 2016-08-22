@@ -1,7 +1,7 @@
 'use strict';
 
 const fs = require('fs');
-const fileName = './persons.json';
+const fileName = 'persons.json';
 
 const myJson = (function () {
   function publicGetNames(req, callback) {

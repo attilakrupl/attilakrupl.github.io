@@ -12,13 +12,13 @@ app.use(express.static('/client/css'));
 app.use(express.static('/client/js'));
 app.use(cors());
 
-app.get('/names/', (req, res) => {
+app.get('/', (req, res) => {
   myJson.getNames(req, row => {
     res.send(row);
   });
 });
 
-app.post('/names/', (req, res) => {
+app.post('/', (req, res) => {
   myJson.updateName(req, row => {
     res.send(row);
   });
