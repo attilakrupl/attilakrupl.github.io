@@ -8,6 +8,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(express.static('../../'));
 app.use(express.static('../../client/css'));
+app.use(express.static('../../client/js'));
 
 app.get('/names/', (req, res) => {
   myJson.getNames(req, row => {
