@@ -3,12 +3,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const myJson = require('./queries');
+const cors = require('cors');
 
 const app = express();
 app.use(bodyParser.json());
 app.use(express.static('../../'));
 app.use(express.static('../../client/css'));
 app.use(express.static('../../client/js'));
+app.use(cors());
 
 app.get('/names/', (req, res) => {
   myJson.getNames(req, row => {
