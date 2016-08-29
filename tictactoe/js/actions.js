@@ -1,67 +1,69 @@
-
-function tickField(i) {
-  return function() {
-    document.querySelector("#n"+i).classList.add("playerSign");
-    board[i].player=true;
-    pushBoardDataToLS();
-    if(someoneWon("player")) {
-      addScore("player");
-      alert("Player won!");
-    } else {
-      computersTurn();
-    }
+function playerWon() {
+  if(someoneWon("player")) {
+    addScore("player");
+    resetBoard()
+    startGame();
+  } else {
+    computersTurn();
   }
 }
 
-function circleField(i) {
-  document.querySelector("#n"+i).classList.add("computerSign");
-  board[i].computer=true;
-  pushBoardDataToLS();
+function computerWon() {
   if (someoneWon("computer")) {
     addScore("computer");
-    alert("Computer won!");
+    resetBoard()
+    startGame();
+  } else {
+    console.log("Players turn");
   }
+}
+
+function playersTurn(i) {
+  return function() {
+    setPlayersField(i);
+    setBoardInLS();
+    playerWon();
+  }
+}
+
+function availableFields() {
+  var idOfEmptyFields = [];
+  for (var i = 0; i < board.length; i++) {
+    if (!(board[i].computer || board[i].player)){
+      idOfEmptyFields.push(board[i].id);
+    }
+  }
+  return idOfEmptyFields;
 }
 
 function computersTurn() {
-  if (thereAreAvailableFields()) {
-    var randomField = board[Math.floor(Math.random()*9)];
-    if(!(randomField.computer || randomField.player)) {
-      circleField(randomField.id);
-    } else {
-      computersTurn();
-    }
+  var listOfFields = availableFields();
+  console.log(listOfFields);
+  if (listOfFields.length) {
+    setComputersField(AISelectField(listOfFields));
+    setBoardInLS();
   } else {
-    console.log("End of game");
+    console.log("This is a tie");
   }
-}
-
-function thereAreAvailableFields() {
-  var numberOfEmptyFields = 0;
-  for (var i = 0; i < board.length; i++) {
-    if (!(board[i].computer || board[i].player)){
-      numberOfEmptyFields++;
-    }
-  }
-  return (numberOfEmptyFields > 0 ? true : false);
 }
 
 function addScore(who) {
   if (who ==="player") {
     playerScore++;
+    setPlayerScoreInLS();
   } if (who ==="computer") {
     computerScore++;
+    setComputerScoreInLS()
   }
-  setScoresFromMemory();
-  pushScoresDataToLS();
+  initializeScoresFromMemory();
 }
 
 function someoneWon(who) {
-  if ((board[0][who]&&board[1][who]&&board[2][who]) || (board[3][who]&&board[4][who]&&board[5][who]) || (board[6][who]&&board[7][who]&&board[8][who])) {
+  if ((board[0][who] && board[1][who] &&board[2][who]) || (board[3][who] && board[4][who] && board[5][who]) || (board[6][who] && board[7][who] && board[8][who])) {
     return true;
-  } else if ((board[0][who]&&board[3][who]&&board[6][who]) || (board[1][who]&&board[4][who]&&board[7][who]) || (board[2][who]&&board[5][who]&&board[8][who])) {
+  } else if ((board[0][who] && board[3][who] && board[6][who]) || (board[1][who] && board[4][who] && board[7][who]) || (board[2][who] && board[5][who] && board[8][who])) {
     return true;
-  } else if ((board[0][who]&&board[4][who]&&board[8][who]) || (board[2][who]&&board[4][who]&&board[6][who])) {
+  } else if ((board[0][who] && board[4][who] && board[8][who]) || (board[2][who] && board[4][who] && board[6][who])) {
     return true;
   } else {
     return false;
