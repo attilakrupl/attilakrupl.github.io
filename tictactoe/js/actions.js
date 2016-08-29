@@ -1,18 +1,4 @@
 
-function startGame() {
-  initializeBoard();
-  initializeScores();
-}
-
-function pushBoardDataToLS() {
-  localStorage.setItem('board', JSON.stringify(board));
-}
-
-function pushScoresDataToLS() {
-  localStorage.setItem('playerScore', JSON.stringify(playerScore));
-  localStorage.setItem('computerScore', JSON.stringify(computerScore));
-}
-
 function tickField(i) {
   return function() {
     document.querySelector("#n"+i).classList.add("playerSign");
