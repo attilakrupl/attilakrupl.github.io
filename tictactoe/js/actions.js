@@ -1,7 +1,8 @@
 function playerWon() {
   if(someoneWon("player")) {
     addScore("player");
-    resetBoard()
+    removeEventListeners();
+    resetBoard();
     startGame();
   } else {
     computersTurn();
@@ -11,7 +12,8 @@ function playerWon() {
 function computerWon() {
   if (someoneWon("computer")) {
     addScore("computer");
-    resetBoard()
+    removeEventListeners();
+    resetBoard();
     startGame();
   } else {
     console.log("Players turn");
@@ -37,10 +39,9 @@ function availableFields() {
 }
 
 function computersTurn() {
-  var listOfFields = availableFields();
-  console.log(listOfFields);
-  if (listOfFields.length) {
-    setComputersField(AISelectField(listOfFields));
+  console.log(availableFields());
+  if (availableFields().length) {
+    setComputersField(AISelectField(availableFields()));
     setBoardInLS();
   } else {
     console.log("This is a tie");

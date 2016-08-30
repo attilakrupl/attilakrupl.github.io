@@ -48,3 +48,9 @@ function initializeFieldAttributesFromMemory(i) {
   fields[i].setAttribute('class', 'gameField')
   setEventListenerToField(i);
 }
+
+function removeEventListeners() {
+  for (var i = 0; i < fields.length; i++) {
+  fields[i].removeEventListener('click', playersTurn(i));
+  }
+}
