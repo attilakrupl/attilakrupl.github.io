@@ -6,7 +6,7 @@ var computerScore = 0;
 
 function initializeScoresFromStorage() {
   document.querySelector('.playerScore').innerHTML = "<p>Player: " + getObjectFromLS("playerScore") + "</p>";
-  document.querySelector('.computerScore').innerHTML = "<p>Computer: " + getObjectFromLS("computerScore ") + "</p>";
+  document.querySelector('.computerScore').innerHTML = "<p>Computer: " + getObjectFromLS("computerScore") + "</p>";
 }
 
 function initializeScoresFromMemory() {
@@ -34,9 +34,11 @@ function setEventListenerToField(i) {
 
 function initializeFieldAttributesFromLS(i) {
   if(board[i].computer===true){
-    setClassToField("computer", i);
+    console.log("init comp field");
+    setClassToField("computerSign", i);
   } else if(board[i].player===true){
-    setClassToField("player", i);
+    console.log("init playa field");
+    setClassToField("playerSign", i);
   }
   setEventListenerToField(i);
 }

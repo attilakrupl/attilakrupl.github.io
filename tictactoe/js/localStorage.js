@@ -21,6 +21,7 @@ function scoresInLSExist() {
 }
 
 function getObjectFromLS(objectName) {
+  console.log("init object: " + objectName);
   return(JSON.parse(localStorage.getItem(objectName)));
 }
 
@@ -29,9 +30,11 @@ function setBoardInLS() {
 }
 
 function setPlayerScoreInLS() {
+  console.log("setPlayerScore");
   localStorage.setItem('playerScore', JSON.stringify(playerScore));
 }
 
 function setComputerScoreInLS() {
+  console.log("set comp score");
   localStorage.setItem('computerScore', JSON.stringify(computerScore));
 }

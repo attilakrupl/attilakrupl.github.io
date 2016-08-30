@@ -1,13 +1,18 @@
 function startGame() {
+  console.log("start game");
   initializeBoard();
   initializeScores();
+  setPlayerScoreInLS();
+  setComputerScoreInLS();
 }
 
 function initializeBoard() {
   if(boardInLSExists()) {
+    console.log("init from ls1");
     initializeBoardFromStorage();
   } else {
     initializeBoardFromMemory();
+    console.log("init from mem1");
   }
 }
 
@@ -20,8 +25,10 @@ function initializeScores() {
 }
 
 function initializeBoardFromStorage() {
+  console.log("init from ls2");
   board = getObjectFromLS('board');
   for (var i = 0; i < board.length; i++){
+    console.log("init from ls4");
     initializeFieldAttributesFromLS(i);
   }
 }
