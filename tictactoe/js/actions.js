@@ -22,9 +22,13 @@ function computerWon() {
 function playersTurn() {
     console.log("i clicked once");
     var i = event.target.id[1];
-    setPlayersField(i);
-    setBoardInLS();
-    playerWon();
+    if (currentFieldAvailable(i)) {
+      setPlayersField(i);
+      setBoardInLS();
+      playerWon();
+    } else {
+      console.log("pick a new field you basterd");
+    }
 }
 
 function availableFields() {
@@ -37,11 +41,20 @@ function availableFields() {
   return idOfEmptyFields;
 }
 
+function currentFieldAvailable(i) {
+  if (!(board[i].computer || board[i].player)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 function computersTurn() {
   console.log(availableFields());
   if (availableFields().length) {
     setComputersField(AISelectField(availableFields()));
     setBoardInLS();
+    computerWon();
   } else {
     console.log("This is a tie");
   }
