@@ -30,7 +30,7 @@ function setBoardInLS() {
 }
 
 function setPlayerScoreInLS() {
-  console.log("setPlayerScore");
+  console.log("setPlayerScore in LS");
   localStorage.setItem('playerScore', JSON.stringify(playerScore));
 }
 

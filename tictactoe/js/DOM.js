@@ -29,7 +29,7 @@ function setComputersField(i) {
 }
 
 function setEventListenerToField(i) {
-  fields[i].addEventListener('click', playersTurn(i));
+  fields[i].addEventListener('click', playersTurn);
 }
 
 function initializeFieldAttributesFromLS(i) {

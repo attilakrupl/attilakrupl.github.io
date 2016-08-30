@@ -1,7 +1,7 @@
 function playerWon() {
+  console.log("player won called");
   if(someoneWon("player")) {
     addScore("player");
-    removeEventListeners();
     resetBoard();
     startGame();
   } else {
@@ -12,7 +12,6 @@ function playerWon() {
 function computerWon() {
   if (someoneWon("computer")) {
     addScore("computer");
-    removeEventListeners();
     resetBoard();
     startGame();
   } else {
@@ -20,12 +19,12 @@ function computerWon() {
   }
 }
 
-function playersTurn(i) {
-  return function() {
+function playersTurn() {
+    console.log("i clicked once");
+    var i = event.target.id[1];
     setPlayersField(i);
     setBoardInLS();
     playerWon();
-  }
 }
 
 function availableFields() {
@@ -49,12 +48,15 @@ function computersTurn() {
 }
 
 function addScore(who) {
+  console.log("add score for player");
   if (who ==="player") {
     playerScore++;
     setPlayerScoreInLS();
-  } if (who ==="computer") {
+  } else if (who ==="computer") {
     computerScore++;
     setComputerScoreInLS()
+  } else {
+    console.log("This is impossible");
   }
   initializeScoresFromMemory();
 }
