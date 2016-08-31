@@ -1,22 +1,26 @@
 'use strict';
 var button = document.querySelector('#submitButton');
 var userGuess = document.querySelector('#userGuess');
+var list = ['pear', 'melon', 'pineapple', 'banana', 'lemon', 'watermelon'];
 
 const controller = (function() {
-  var list = ['manna', 'lolka', 'pear', 'melon'];
 
   function getInput() {
     return userGuess.value;
   }
 
-  function inputInList(list, userInput) {
-    return list.includes(userInput);
+  function clearInputField() {
+    userGuess.value = '';
+  }
+
+  function elementInList(list, element) {
+    return list.includes(element);
   }
 
   function getScore(userInput) {
     var charList = [];
     for (var i = 0; i < userInput.length; i++) {
-      if(!inputInList(charList,userInput[i])){
+      if(!elementInList(charList,userInput[i])){
         charList.push(userInput[i]);
       }
     }
@@ -24,24 +28,30 @@ const controller = (function() {
   }
 
   function runGame() {
+    load();
     var input = getInput();
-    if (inputInList(list, input)) {
-      let guessScore
-      console.log(getScore(input));
-      display.score(getScore(input));
+    clearInputField();
+    if (elementInList(list, input)) {
+      var highScore = getScore(input);
+      display.score(highScore);
+      highscore.saveItemToMemory(highScore, input);
+      highscore.saveListToLS();
     } else {
-      console.log("Wrong word you bastard! Try again!");
-      return "Wrong word you bastard! Try again!";
+      display.error("Word not in dictionary! Please try again!");
     }
   }
 
   return {
-    getInput,
-    inputInList,
-    getScore,
     runGame,
   }
 
 }());
 
 button.addEventListener('click', controller.runGame);
+userGuess.addEventListener('keypress', function (e) {
+    var key = e.which || e.keyCode;
+    if (key === 13) {
+      e.preventDefault();
+      return controller.runGame();
+    }
+});
