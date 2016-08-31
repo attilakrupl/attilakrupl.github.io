@@ -9,7 +9,6 @@ const highscore = (function() {
   function load() {
     var LSHighScoreContainer = localStorage.getItem('highScoreContainer');
     highScoreContainer = JSON.parse(LSHighScoreContainer);
-    display.highscores(highScoreContainer);
     if(!highScoreContainer){
       highScoreContainer = [];
     }
@@ -32,6 +31,7 @@ const highscore = (function() {
 
   function saveListToLS() {
     var listToUpload = JSON.stringify(highScoreContainer);
+    display.showScores(highScoreContainer);
     localStorage.setItem('highScoreContainer', listToUpload);
   }
 

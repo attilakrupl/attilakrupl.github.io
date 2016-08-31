@@ -2,7 +2,7 @@
 var playButton = document.querySelector('#submitButton');
 var highScoreButton = document.querySelector('#highScoreButton');
 var userGuess = document.querySelector('#userGuess');
-var list = ['pear', 'melon', 'pineapple', 'banana', 'lemon', 'watermelon'];
+var hideHSButton = document.querySelector('.hideHSButton');
 
 const controller = (function() {
 
@@ -30,7 +30,7 @@ const controller = (function() {
 
   function runGame() {
     var highScoreContainer = highscore.load();
-    var input = getInput();
+    var input = getInput().toLowerCase();
     clearInputField();
     var highScore = getScore(input);
     if(highscore.wordInHighScores(highScoreContainer, input)) {
@@ -44,14 +44,18 @@ const controller = (function() {
     }
   }
 
+
   return {
     runGame,
   }
 
 }());
 
+display.showScores(highscore.load());
+
 playButton.addEventListener('click', controller.runGame);
-highScoreButton.addEventListener('click', display.highscores);
+highScoreButton.addEventListener('click', display.showHSPanel);
+hideHSButton.addEventListener('click', display.hideHSPanel);
 userGuess.addEventListener('keypress', function (e) {
     var key = e.which || e.keyCode;
     if (key === 13) {

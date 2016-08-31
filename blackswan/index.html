@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- App works with the following set of words:
+  var list = ['pear', 'melon', 'pineapple', 'banana', 'lemon', 'watermelon'];
+  -->
   <meta charset="utf-8">
   <link rel="shortcut icon" href="./img/favicon.ico" />
   <title>BlackSwan Application</title>
@@ -21,13 +24,30 @@
             </div>
             <div calss="buttonField">
               <button id="submitButton" type="button">Play!</button>
-              <button id="highScoreButton">HighScore</button>
+              <button id="highScoreButton" type="button">HighScore</button>
             </div>
         </form>
       </div>
       <div class="response"></div>
       <div class="highscores" id="highscoresInvisible">
         <h1>HighScores</h1>
+        <button class="hideHSButton" type="button">Hide</button>
+        <div class="scores">
+        <table class="listOfScores">
+          <thead>
+            <tr>
+              <th>Word</th>
+              <th>Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       </div>
     </div>
   </main>
@@ -35,8 +55,12 @@
   <footer>
 
   </footer>
+    <script src="./js/dict.js"></script>
     <script src="./js/display.js"></script>
     <script src="./js/highscore.js"></script>
     <script src="./index.js"></script>
-</body>
+    <!-- App works with the following set of words:
+    var list = ['pear', 'melon', 'pineapple', 'banana', 'lemon', 'watermelon'];
+    -->
+  </body>
 </html>

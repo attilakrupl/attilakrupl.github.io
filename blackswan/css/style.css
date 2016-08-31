@@ -18,7 +18,7 @@ h1 {
 main {
   background-color: rgba(255, 255, 255, 0.8);
   width: 700px;
-  height: 250px;
+  height: 170px;
   margin: 30px auto;
   border-radius: 10px;
 }
@@ -73,4 +73,15 @@ button {
   left: -125%;
   -webkit-transition: left 500ms;
   transition: left 500ms;
+}
+
+.escapeText {
+  font-size: 15px;
+}
+
+table {
+  width: 90%;
+  justify-content: center;
+  margin: 10px 0 10px 15px;
+  font-size: 0.8em;
 }
