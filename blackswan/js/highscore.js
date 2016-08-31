@@ -12,10 +12,10 @@ const highscore = (function() {
     if(!highScoreContainer){
       highScoreContainer = [];
     }
+    return highScoreContainer;
   }
 
   function saveItemToMemory(score, word) {
-    load();
     var newHighScore = new highScoreObject(score, word);
     highScoreContainer.push(newHighScore);
   }

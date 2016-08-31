@@ -27,17 +27,39 @@ const controller = (function() {
     return charList.length;
   }
 
+  function wordInHighScores(list, element) {
+    for(var i =0; i < list.length; i++) {
+      if(list[i].word === element) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  function scoreHigherThanExisting(list, score) {
+    for(var i =0; i < list.length; i++) {
+      if(list[i].score >= score) {
+        return false;
+      }
+    }
+    return true;
+  }
+
   function runGame() {
-    load();
+    var highScoreContainer = highscore.load();
     var input = getInput();
     clearInputField();
-    if (elementInList(list, input)) {
-      var highScore = getScore(input);
+    var highScore = getScore(input);
+    if(wordInHighScores(highScoreContainer, input)) {
+      display.error("You've already tried this word!");
+    } else if (!(scoreHigherThanExisting(highScoreContainer, highScore))) {
+      display.error("You've scored better previously!");
+    } else if (!(elementInList(list, input))) {
+      display.error("Word not in dictionary! Please try again!");
+    } else {
       display.score(highScore);
       highscore.saveItemToMemory(highScore, input);
       highscore.saveListToLS();
-    } else {
-      display.error("Word not in dictionary! Please try again!");
     }
   }
 
