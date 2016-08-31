@@ -1,4 +1,5 @@
 const response = document.querySelector('.response');
+const HSTable = document.querySelector('.highscores');
 
 const display = (function () {
 
@@ -11,7 +12,7 @@ const display = (function () {
   }
 
   function highscores(highscores) {
-    return null;
+
   }
 
   return {

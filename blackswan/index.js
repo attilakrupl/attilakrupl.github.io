@@ -1,5 +1,6 @@
 'use strict';
-var button = document.querySelector('#submitButton');
+var playButton = document.querySelector('#submitButton');
+var highScoreButton = document.querySelector('#highScoreButton');
 var userGuess = document.querySelector('#userGuess');
 var list = ['pear', 'melon', 'pineapple', 'banana', 'lemon', 'watermelon'];
 
@@ -49,7 +50,8 @@ const controller = (function() {
 
 }());
 
-button.addEventListener('click', controller.runGame);
+playButton.addEventListener('click', controller.runGame);
+highScoreButton.addEventListener('click', display.highscores);
 userGuess.addEventListener('keypress', function (e) {
     var key = e.which || e.keyCode;
     if (key === 13) {
