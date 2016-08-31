@@ -1,7 +1,7 @@
 body{
   font-family: Helvetica;
   margin: 0;
-  background: #58CAFF;
+  background-image: url("../img/libbg.jpg");;
   font-size: 34px;
 }
 
@@ -9,7 +9,7 @@ p{
   margin: 10px;
 }
 
-h1,h2,h3{
+h1 {
   margin: 0;
 }
 
@@ -27,8 +27,8 @@ h1,h2,h3{
   display: inline-block;
 }
 
-main{
-  background: #eee;
+main {
+  background-color: rgba(255, 255, 255, 0.8);
   width: 700px;
   margin: 30px auto;
   border-radius: 10px;
@@ -42,37 +42,21 @@ main{
   flex-direction: column;
 }
 
-.gameBoard {
-  height: 600px;
-  width: 600px;
-  margin: 0 auto;
+#userGuess, button {
+  height: 30px;
+
+}
+
+#userGuess {
+  width: 400px;
+  font-size: 34px;
+  border: 0;
   border-radius: 5px;
-  display: flex;
-  flex-direction: column;
+  padding-left: 12px;
 }
 
-.row, .scores {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-.scores {
-
-}
-
-.gameField {
-  height: 190px;
-  width: 190px;
-  background-color: #0CB2FF;
-  box-shadow: 10px 10px 5px #888888;
-  margin: 5px;
-}
-
-.playerSign {
-  background-image: url("../img/o.png");
-}
-
-.computerSign {
-  background-image: url("../img/x.png");
+button {
+  width: 150px;
+  border-radius: 8px;
+  background-color: #FFC897;
 }
