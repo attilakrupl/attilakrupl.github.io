@@ -9,11 +9,21 @@ const highscore = (function() {
   function load() {
     var LSHighScoreContainer = localStorage.getItem('highScoreContainer');
     highScoreContainer = JSON.parse(LSHighScoreContainer);
+    display.highscores(highScoreContainer);
     if(!highScoreContainer){
       highScoreContainer = [];
     }
     return highScoreContainer;
   }
+
+    function wordInHighScores(list, element) {
+      for(var i =0; i < list.length; i++) {
+        if(list[i].word === element) {
+          return true;
+        }
+      }
+      return false;
+    }
 
   function saveItemToMemory(score, word) {
     var newHighScore = new highScoreObject(score, word);
@@ -29,6 +39,7 @@ const highscore = (function() {
     saveItemToMemory,
     saveListToLS,
     load,
+    wordInHighScores,
   }
 
 }());

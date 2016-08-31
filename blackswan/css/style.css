@@ -1,0 +1,78 @@
+body{
+  font-family: Helvetica;
+  margin: 0;
+  background: #58CAFF;
+  font-size: 34px;
+}
+
+p{
+  margin: 10px;
+}
+
+h1,h2,h3{
+  margin: 0;
+}
+
+#menu-bar{
+  background: #06597F;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+#menu-bar h1{
+  font-size: 34px;
+  font-weight: normal;
+  display: inline-block;
+}
+
+main{
+  background: #eee;
+  width: 700px;
+  margin: 30px auto;
+  border-radius: 10px;
+}
+
+.content{
+  padding: 20px;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.gameBoard {
+  height: 600px;
+  width: 600px;
+  margin: 0 auto;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.row, .scores {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.scores {
+
+}
+
+.gameField {
+  height: 190px;
+  width: 190px;
+  background-color: #0CB2FF;
+  box-shadow: 10px 10px 5px #888888;
+  margin: 5px;
+}
+
+.playerSign {
+  background-image: url("../img/o.png");
+}
+
+.computerSign {
+  background-image: url("../img/x.png");
+}

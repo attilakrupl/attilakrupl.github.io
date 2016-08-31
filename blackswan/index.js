@@ -27,33 +27,13 @@ const controller = (function() {
     return charList.length;
   }
 
-  function wordInHighScores(list, element) {
-    for(var i =0; i < list.length; i++) {
-      if(list[i].word === element) {
-        return true;
-      }
-    }
-    return false;
-  }
-
-  function scoreHigherThanExisting(list, score) {
-    for(var i =0; i < list.length; i++) {
-      if(list[i].score >= score) {
-        return false;
-      }
-    }
-    return true;
-  }
-
   function runGame() {
     var highScoreContainer = highscore.load();
     var input = getInput();
     clearInputField();
     var highScore = getScore(input);
-    if(wordInHighScores(highScoreContainer, input)) {
+    if(highscore.wordInHighScores(highScoreContainer, input)) {
       display.error("You've already tried this word!");
-    } else if (!(scoreHigherThanExisting(highScoreContainer, highScore))) {
-      display.error("You've scored better previously!");
     } else if (!(elementInList(list, input))) {
       display.error("Word not in dictionary! Please try again!");
     } else {

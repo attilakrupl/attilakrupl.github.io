@@ -10,9 +10,14 @@ const display = (function () {
     response.innerHTML = "<p>" + error + "</p>";
   }
 
+  function highscores(highscores) {
+    return null;
+  }
+
   return {
     score,
     error,
+    highscores,
   }
 
 }());
