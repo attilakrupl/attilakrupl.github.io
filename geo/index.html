@@ -1,0 +1,49 @@
+
+<html>
+<head>
+	<title>Tourspung Job Exercise</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+   <!-- <script src="https://npmcdn.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
+	 <link rel="stylesheet" href="https://npmcdn.com/leaflet@1.0.0-rc.3/dist/leaflet.css" /> -->
+	 <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+	 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+	 <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+	<!-- <div id="map" style="width: 600px; height: 400px"></div> -->
+	<div id="mapid"></div>
+	<script>
+      /*
+            - display a leaflet map
+               ( a good startpoint is http://leafletjs.com/examples/quick-start.html )
+            - use toursprung terrain map-tiles
+               -> tilehost: http://tile01.maptoolkit.net/terrain/{z}/{x}/{y}.png
+            - get browser geolocation ( vi the L.Map.locate method )
+               -> if location is found, show geolocation in zoomlevel 15
+               -> if location is not found show vienna
+                  (coordinates: latitude: 48.2, longitude: 16.3 ) in zoomlevel 10
+            - load openstreetmap markers (IMPORTANT: cafes only)
+               from the MTK index-server for the current map (e.g current boundingbox)
+               doku in the attached pdf
+               - access the index-server (via jQuery.ajax and jsonp):
+                  API parameters:
+                  - host: http://index.maptoolkit.net/top
+                  - apikey: 'guest'
+                  - resources: '{"osm":{"kv":"amenity=cafe"}}'
+                  display the result via L.geoJson (only features of type: "item")
+               - on a marker-click show the item description, done via
+                  a request to the MTK items server (doko also in the pdf)
+                  -> host: http://items.maptoolkit.net
+                  -> apiKey: 'guest'
+               - reload all map markers on every map movement
+      */
+
+   	</script>
+		<script src="test.js"></script>
+
+</body>
+</html>
