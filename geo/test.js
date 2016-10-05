@@ -24,13 +24,13 @@ function myRequest(method, url, data, cb) {
 }
 
 //add tile layer to map
-L.tileLayer('http://tile01.maptoolkit.net/terrain/{z}/{x}/{y}.png').addTo(mymap);
+L.tileLayer('https://tile01.maptoolkit.net/terrain/{z}/{x}/{y}.png').addTo(mymap);
 
 
 function showPredefinedAmenities(record) {
   JSON.parse(record).features.forEach((e) => {
     var location = L.geoJson(e);
-    var parameterList = 'http://items.maptoolkit.net?apiKey=guest&ids=[' + e.properties.id + ']&thumbnail_size=200×156';
+    var parameterList = 'https://items.maptoolkit.net?apiKey=guest&ids=[' + e.properties.id + ']&thumbnail_size=200×156';
     feedDescriptionIntoLocationObject(parameterList, location);
   });
 }
