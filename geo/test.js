@@ -12,6 +12,9 @@ const mymap = L.map('mapid');
 var latLngZ = [];
 var listOfAmenities = [];
 
+//add tile layer to map
+L.tileLayer('https://tile01.maptoolkit.net/terrain/{z}/{x}/{y}.png').addTo(mymap);
+
 //define http request
 function myRequest(method, url, data, cb) {
   const xhr = new XMLHttpRequest();
@@ -23,10 +26,14 @@ function myRequest(method, url, data, cb) {
   xhr.send(data);
 }
 
-//add tile layer to map
-L.tileLayer('https://tile01.maptoolkit.net/terrain/{z}/{x}/{y}.png').addTo(mymap);
+//runs a request which returns with the cafe descriptions, binds them to the location markers and adds them to the map.
+function feedDescriptionIntoLocationObject(parameters, location) {
+  myRequest('GET', parameters, '', (description) => {
+    location.bindPopup(description).addTo(mymap);
+  });
+}
 
-
+//displays amenities and calls feedDescriptionIntoLocationObject which adds description to markers
 function showPredefinedAmenities(record) {
   JSON.parse(record).features.forEach((e) => {
     var location = L.geoJson(e);
@@ -35,18 +42,14 @@ function showPredefinedAmenities(record) {
   });
 }
 
+//get request to return amenities with the showPredefinedAmenities callback to display these
 function getContent(parameters) {
   myRequest('GET', parameters, '', (cafes) => {
     showPredefinedAmenities(cafes);
   });
 }
 
-function feedDescriptionIntoLocationObject(parameters, location) {
-  myRequest('GET', parameters, '', (description) => {
-    location.bindPopup(description).addTo(mymap);
-  });
-}
-
+//shows Vienna as default location if location can't be found
 function showDefaultLocation(e) {
   latLngZ = [48.2, 16.3, 10]
   mymap.setView([latLngZ[0], latLngZ[1]], latLngZ[2]);
@@ -55,7 +58,7 @@ function showDefaultLocation(e) {
   return latLngZ;
 }
 
-//
+//shows browser location if location service is enabled on device/browser
 function showMyLocation(e) {
   latLngZ = [e.latlng.lat, e.latlng.lng, 15]
   mymap.setView([latLngZ[0], latLngZ[1]], latLngZ[2]);
@@ -64,7 +67,7 @@ function showMyLocation(e) {
   return latLngZ;
 }
 
-//Event listeners and locate event
+//Event listeners and locating 
 mymap.on('locationerror', showDefaultLocation);
 mymap.on('locationfound', showMyLocation);
 mymap.on('click', showMyLocation);
