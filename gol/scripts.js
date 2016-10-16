@@ -1,5 +1,7 @@
 var main = document.querySelector('main');
 var container = document.querySelector('.container');
+var cycleCounter = document.querySelector('h2');
+var startCycle = document.querySelector('.start');
 
 var a = 10;
 var width = 1000;
@@ -44,7 +46,8 @@ function neighbours (universe, y, x) {
   return numberOfNeighbours;
 }
 
-function live(universe) {
+
+function live() {
   var doLive = setInterval(function() {
     var newUniverse = [];
     for (var i = 0; i < universe.length; i++) {
@@ -64,22 +67,21 @@ function live(universe) {
         }
       }
       newUniverse.push(newUniverseLine);
-      // populateUniverse(newUniverse);
     }
     universe = newUniverse;
     populateUniverse(universe);
     counter++;
-    console.log(counter);
+    cycleCounter.textContent = "";
+    cycleCounter.textContent = "Cycles: " + counter;
   }, 100);
 
 }
 
-function runThis(cb) {
+function runThis() {
   universe = createUniverse();
   populateUniverse(universe);
-  cb(universe);
-
-
 }
 
-runThis(live);
+runThis();
+
+startCycle.addEventListener("click", live)

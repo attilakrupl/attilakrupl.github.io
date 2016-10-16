@@ -7,6 +7,8 @@ html, body, main {
 
 main {
   background-color: black;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
@@ -14,6 +16,7 @@ main {
   height: 600px;
   display: flex;
   flex-wrap: wrap;
+  margin: 0 auto;
 }
 
 .zero {
@@ -28,4 +31,20 @@ main {
   height: 8px;
   border: 1px solid #0C91FF;
   background-color: gold;
+}
+
+.control {
+  margin: 0 auto;
+}
+
+.cycleCounter {
+  margin: 0 auto;
+}
+
+.start {
+  background-color: white;
+}
+
+h2 {
+  color: white;
 }
