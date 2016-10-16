@@ -19,7 +19,7 @@ L.tileLayer('https://tile01.maptoolkit.net/terrain/{z}/{x}/{y}.png').addTo(mymap
 function myRequest(method, url, data, cb) {
   const xhr = new XMLHttpRequest();
   xhr.open(method, url);
-  // xhr.setRequestHeader('content-type', 'application/json; charset=utf-8');
+  xhr.setRequestHeader('content-type', 'text/plain');
   xhr.onload = () => {
     cb(xhr.responseText);
   };
@@ -29,7 +29,7 @@ function myRequest(method, url, data, cb) {
 //runs a request which returns with the cafe descriptions, binds them to the location markers and adds them to the map.
 function feedDescriptionIntoLocationObject(parameters, location) {
   myRequest('GET', parameters, '', (description) => {
-    location.bindPopup(description).addTo(mymap);
+    location.bindPopup(description.features[0].properties.description).addTo(mymap);
   });
 }
 
@@ -67,7 +67,7 @@ function showMyLocation(e) {
   return latLngZ;
 }
 
-//Event listeners and locating 
+//Event listeners and locating
 mymap.on('locationerror', showDefaultLocation);
 mymap.on('locationfound', showMyLocation);
 mymap.on('click', showMyLocation);
