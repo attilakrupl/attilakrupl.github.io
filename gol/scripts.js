@@ -73,7 +73,7 @@ function live() {
     counter++;
     cycleCounter.textContent = "";
     cycleCounter.textContent = "Cycles: " + counter;
-  }, 100);
+  }, 400);
 
 }
 
