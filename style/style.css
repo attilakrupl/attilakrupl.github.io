@@ -24,11 +24,11 @@ body{
 .AttiNameDiv {
   float: left;
   clear: none;
-  font-family: 'Fira Sans', sans-serif;
-  font-size: 32px;
 }
 
 .AttiName {
+  font-family: 'Arimo', sans-serif;
+  font-size: 32px;
   margin: 21px 0px;
   color: #626262;
 }
