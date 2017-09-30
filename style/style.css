@@ -1,3 +1,11 @@
+/*
+Blue background color:  #1698E8;
+
+
+
+*/
+
+
 body{
   width: 100%;
   margin: 0 auto;
@@ -20,14 +28,28 @@ body{
   align-items: center;
   justify-content: center;
   height: 80px;
-  width: 80px;
+  width: 45px;
 }
 
 .AttiExtendButton{
-  height: 37px;
-  width: 37px;
+  height: 45px;
+  width: 45px;
+  border: 0px;
+  background-color: #1698E8;
+  color: white;
+  font-size: 28px;
 }
 
 .AttiBigBox {
   width: 1054px;
+  height: 527px;
+}
+
+.AttiIntroBox {
+  background-color: #1698E8;
+}
+
+.AttiContent {
+  width: 1054px;
+  margin: 0 auto;
 }
