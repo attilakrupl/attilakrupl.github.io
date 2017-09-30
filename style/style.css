@@ -1,6 +1,8 @@
 /*
 Blue background color:  #1698E8;
-
+Base image and div size: 527px;
+Double div size: 1057px;
+Body background color: #EEEEEE;
 
 
 */
@@ -9,16 +11,26 @@ Blue background color:  #1698E8;
 body{
   width: 100%;
   margin: 0 auto;
+  font-family: 'EB Garamond', serif;
+  background-color: #EEEEEE;
 }
 
 .AttiNameBar {
   display: inline-block;
   width: 1054px;
+  text-align: center;
 }
 
 .AttiNameDiv {
   float: left;
   clear: none;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 32px;
+}
+
+.AttiName {
+  margin: 21px 0px;
+  color: #626262;
 }
 
 .AttiExtendButtonDiv {
@@ -43,10 +55,14 @@ body{
 .AttiBigBox {
   width: 1054px;
   height: 527px;
+  display: flex;
+
 }
 
 .AttiIntroBox {
   background-color: #1698E8;
+  width: 527px;
+  height: 527px;
 }
 
 .AttiContent {
