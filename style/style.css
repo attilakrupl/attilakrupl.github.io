@@ -16,9 +16,18 @@ body{
 .AttiExtendButtonDiv {
   float: right;
   clear: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 80px;
 }
 
-.AttiExtendButton, .AttiExtendButtonDiv {
-  height: 60px;
-  width: 60px;
+.AttiExtendButton{
+  height: 37px;
+  width: 37px;
+}
+
+.AttiBigBox {
+  width: 1054px;
 }
