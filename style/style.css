@@ -1,71 +1,17 @@
-/*
-Blue background color:  #1698E8;
-Base image and div size: 527px;
-Double div size: 1057px;
-Body background color: #EEEEEE;
-
-
-*/
-
-
-body{
-  width: 100%;
-  margin: 0 auto;
-  font-family: 'EB Garamond', serif;
-  background-color: #EEEEEE;
+body
+{
+    font-family: 'EB Garamond', sans-serif;
 }
 
-.AttiNameBar {
-  display: inline-block;
-  width: 1054px;
+header, footer
+{
+  background-color: #333;
+  color: #ddd;
+  padding: 20px;
   text-align: center;
 }
 
-.AttiNameDiv {
-  float: left;
-  clear: none;
-}
-
-.AttiName {
-  font-family: 'Arimo', sans-serif;
-  font-size: 32px;
-  margin: 21px 0px;
-  color: #626262;
-}
-
-.AttiExtendButtonDiv {
-  float: right;
-  clear: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 80px;
-  width: 45px;
-}
-
-.AttiExtendButton{
-  height: 45px;
-  width: 45px;
-  border: 0px;
-  background-color: #1698E8;
-  color: white;
-  font-size: 28px;
-}
-
-.AttiBigBox {
-  width: 1054px;
-  height: 527px;
-  display: flex;
-
-}
-
-.AttiIntroBox {
-  background-color: #1698E8;
-  width: 527px;
-  height: 527px;
-}
-
-.AttiContent {
-  width: 1054px;
-  margin: 0 auto;
+.content
+{
+  background-color: #aaaaaa;
 }
