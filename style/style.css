@@ -15,3 +15,9 @@ header, footer
 {
   background-color: #aaaaaa;
 }
+
+.my-imgs
+{
+   max-width: 100%;
+   height: auto;
+}
