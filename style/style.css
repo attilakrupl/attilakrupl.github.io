@@ -21,3 +21,9 @@ header, footer
    max-width: 100%;
    height: auto;
 }
+
+.my-contents
+{
+   text-align: center;
+   text-shadow: 30px;
+}
