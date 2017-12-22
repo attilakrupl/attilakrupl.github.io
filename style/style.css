@@ -1,7 +1,7 @@
 body
 {
     font-family: 'EB Garamond', sans-serif;
-    font-size: 18pxé
+    font-size: 18px;
 }
 
 header, footer
@@ -27,4 +27,16 @@ header, footer
 {
    text-align: center;
    text-shadow: 30px;
+}
+
+.nav-link
+{
+  color: #ddd;
+  font-size:20px;
+}
+
+.nav
+{
+  align-items: right;
+  text-align: right;
 }
