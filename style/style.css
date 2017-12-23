@@ -28,15 +28,13 @@ header, footer
    text-align: center;
    text-shadow: 30px;
 }
+.navbar-header
+{
+  font-size:20px;
+}
 
 .nav-link
 {
   color: #ddd;
   font-size:20px;
-}
-
-.nav
-{
-  align-items: right;
-  text-align: right;
 }
