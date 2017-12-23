@@ -4,7 +4,7 @@ body
     font-size: 18px;
 }
 
-header, footer
+footer
 {
   background-color: #333;
   color: #ddd;
@@ -12,6 +12,20 @@ header, footer
   text-align: center;
 }
 
+.navbar
+{
+  margin-bottom: 0;
+}
+
+.navbar-header
+{
+  font-size:20px;
+}
+
+.navbar-brand
+{
+  font-weight: bold;
+}
 .content
 {
   background-color: #aaaaaa;
@@ -28,13 +42,16 @@ header, footer
    text-align: center;
    text-shadow: 30px;
 }
-.navbar-header
-{
-  font-size:20px;
-}
 
-.nav-link
+
+a.nav-link
 {
   color: #ddd;
   font-size:20px;
+}
+
+.profile-description
+{
+  text-align: right;
+  margin: 0 auto;
 }
