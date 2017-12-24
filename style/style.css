@@ -47,10 +47,9 @@ footer
   background-color: #aaaaaa;
 }
 
-.my-imgs
+.img-responsive
 {
-   max-width: 100%;
-   height: auto;
+
 }
 
 .my-contents
