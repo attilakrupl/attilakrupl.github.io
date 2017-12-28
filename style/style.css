@@ -83,3 +83,8 @@ a.nav-link
    align-items: center;
    justify-content: center;
  }
+
+#fi-name, #fi-se, #fi-we, #fi-sa
+{
+  display: none;
+}
