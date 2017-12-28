@@ -2,12 +2,8 @@ body
 {
     font-family: 'EB Garamond', sans-serif;
     font-size: 18px;
-    padding-top: 31px;
-}
-
-.plaster
-{
-  height: 50px;
+    background-color: #aaaaaa;
+    padding-top: 80px;
 }
 
 footer
@@ -38,18 +34,23 @@ footer
   opacity: 0.9;
 }
 
+.navbar-fixed-top {
+  border-width: 0;
+}
+
 .navbar-brand
 {
   font-weight: bold;
 }
-.content
+
+.content-black
 {
-  background-color: #aaaaaa;
+  background-color: #222;
 }
 
-.img-responsive
+.content-white
 {
-
+  background-color: #aaaaaa;
 }
 
 .my-contents
@@ -69,3 +70,16 @@ a.nav-link
   text-align: right;
   margin: 0 auto;
 }
+
+.fill-screen
+{
+  background-size: cover;
+  background-position: center;
+}
+
+ .content-div-center
+ {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
