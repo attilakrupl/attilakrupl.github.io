@@ -6,6 +6,15 @@ body
     color: rgb(10,10,10);
 }
 
+footer
+{
+  background-color: #333;
+  color: #ddd;
+  padding: 20px;
+  text-align: center;
+}
+
+/* colors of the navbar texts and toggle button*/
 .navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-collapse>li>a, .navbar-inverse .navbar-brand {
     color: rgb(220,220,220);
 }
@@ -13,14 +22,6 @@ body
 .navbar-inverse .navbar-toggle .icon-bar
 {
   border-color: rgb(220,220,220);
-}
-
-footer
-{
-  background-color: #333;
-  color: #ddd;
-  padding: 20px;
-  text-align: center;
 }
 
 .navbar
@@ -52,26 +53,10 @@ footer
   font-weight: bold;
 }
 
-.content-black
-{
-  background-color: #222;
-}
-
-.content-white
-{
-  background-color: #aaaaaa;
-}
-
 .my-contents
 {
    text-align: center;
    text-shadow: 30px;
-}
-
-a.nav-link
-{
-  color: #ddd;
-  font-size:20px;
 }
 
 .fill-screen
@@ -99,6 +84,7 @@ a.nav-link
 
 .row
 {
+  padding-bottom: 50px;
   padding-top: 79px;
 }
 
