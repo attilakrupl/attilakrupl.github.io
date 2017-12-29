@@ -106,7 +106,8 @@ a.nav-link
 
 .wp-background
 {
-  background-image: url(../images/nature-wall.jpg);
+  background-image: url(../images/nature-wall2.jpg);
+  background-attachment: fixed;
 }
 
 h2
