@@ -2,7 +2,7 @@ body
 {
     font-family: 'EB Garamond', sans-serif;
     font-size: 18px;
-    background-color: #aaaaaa;
+    background-color: #cccccc;
     padding-top: 80px;
 }
 
@@ -67,7 +67,7 @@ a.nav-link
 
 .profile-description
 {
-  text-align: right;
+  text-align: left;
   margin: 0 auto;
 }
 
@@ -84,7 +84,32 @@ a.nav-link
    justify-content: center;
  }
 
-#fi-name, #fi-se, #fi-we, #fi-sa
+.fi-header, .fi-paragraph
 {
   display: none;
+}
+
+.justified-paragraph
+{
+  text-align: justify;
+}
+
+.some-upper-padding
+{
+  padding-top: 30px;
+}
+
+.odd-row
+{
+  background-color: #cccccc;
+}
+
+.even-row
+{
+
+}
+
+.wp-background
+{
+  background-image: url(../images/nature-wall.jpg);
 }
