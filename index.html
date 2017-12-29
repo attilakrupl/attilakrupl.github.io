@@ -11,14 +11,6 @@
     <script src="https://use.fontawesome.com/260ebaaf0e.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script>
-      $(document).ready(function(){
-        $("#fi-name").fadeIn(500);
-        $("#fi-se").fadeIn(1000);
-        $("#fi-we").fadeIn(1500);
-        $("#fi-sa").fadeIn(2000);
-      });
-    </script>
   </head>
 
   <body>
@@ -63,10 +55,7 @@
         <section class="col-sm-4 content-div-center">
           <div class="content-font">
             <h1 class="fi-header">HELLO,</h1>
-            <p class="fi-name justified-paragraph">I'm Attila Krüpl,
-            <p class="fi-paragraph justified-paragraph">software engineer,
-            <p class="fi-paragraph justified-paragraph">web enthusiast,
-            <p class="fi-paragraph justified-paragraph">science addict.</p>
+            <p class="fi-name justified-paragraph">I'm Attila Krüpl, software engineer, web enthusiast, science addict.</p>
           </div>
         </section>
         <!-- <div class="down-button">
@@ -101,21 +90,21 @@
       <!-- row 2 -->
       <div class="row" id="portfolio">
         <section class="col-sm-2">
+          <div class="content-font">
+            <h2 class="fi-header">PORTFOLIO</h1>
+            </div>
         </section>
         <section class="col-sm-4 content-div-center">
-          <div>
-            <img class="img-responsive fi-header" src="images\ma_DSC0628.jpg" alt="Attila Krupl"></img>
+          <div class="content-font">
+            <p class="fi-paragraph justified-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p class="fi-paragraph justified-paragraph">Sit amet risus nullam eget. Et ultrices neque ornare aenean euismod elementum nisi quis. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus. Sed enim ut sem viverra aliquet. Venenatis cras sed felis eget velit aliquet. Nullam non nisi est sit amet facilisis magna etiam. Feugiat nibh sed pulvinar proin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames. Morbi quis commodo odio aenean sed. Tellus orci ac auctor augue mauris. Tortor consequat id porta nibh. Aenean vel elit scelerisque mauris pellentesque pulvinar. Pharetra convallis posuere morbi leo urna.</p>
+          </div>
           </div>
         </section>
         <section class="col-sm-4 content-div-center">
           <div class="content-font">
-            <h1 class="fi-header">HELLO,</h1>
-            <p class="fi-paragraph justified-paragraph">I'm Attila Krüpl, software engineer, web enthusiast, science addict.</p>
-            <p class="fi-paragraph justified-paragraph">I work as a C++ software engineer. I can be the part time team member of your developer team if you are looking for someone with experience in C++/Qt software development or web development.</p>
-            <p class="fi-paragraph justified-paragraph">If you are a student or you are going to high school I can prepare you for your math exams.</p>
-            <p class="fi-paragraph justified-paragraph">In 2009 I graduated as a lawyer. Since then I gained significant experience in managing people in Great Britain, learned IT with engineering at the University of Szeged, learned web development at Green Fox Academy - Budapest, and did a plenty of other trainings and courses to become a software engineer.</p>
-            <p class="fi-paragraph justified-paragraph">For more information about my experience, studies and interests please see my profile below.</p>
           </div>
+        </section>
         </section>
       </div> <!-- row 2 -->
     </div> <!-- class="container-fluid" -->
@@ -131,8 +120,12 @@
             <h2>CONTACT ME</h2>
             <p class="fi-paragraph justified-paragraph">
               <a href="https://www.facebook.com/krupl.attila" target="_blank"><i class="fa fa-facebook-f"></i></a>
+              <span class="spacer-span"></span>
               <a href="https://twitter.com/csillagpor1" target="_blank"><i class="fa fa-twitter"></i></a>
+              <span class="spacer-span"></span>
               <a href="https://github.com/attilakrupl" target="_blank"><i class="fa fa-github"></i></a>
+              <span class="spacer-span"></span>
+              <a href="https://www.linkedin.com/in/attila-krupl-a1b43750/" target="_blank"><i class="fa fa-linkedin"></i></a>
             </p>
           </div>
         </section>
@@ -151,7 +144,8 @@
         });
 
         $('body').scrollspy({
-          target:'.navbar'
+          target:'.navbar',
+          offeset:50
         });
       });
 
