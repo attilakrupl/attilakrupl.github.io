@@ -4,7 +4,8 @@ body
     font-size: 18px;
     background-color: #cccccc;
     color: rgb(10,10,10);
-    display: absolute;
+    position: absolute;
+    height: 100%;
 }
 
 footer
@@ -73,7 +74,7 @@ footer
    justify-content: center;
  }
 
-.fi-header, .fi-paragraph
+.fi-header, .fi-paragraph, .fi-name
 {
   display: none;
 }
@@ -133,7 +134,8 @@ h2
   color: black;
 }
 
-.contact-me>p>i
+.contact-me i
 {
   color: white;
+
 }
