@@ -39,8 +39,8 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="cv-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                  <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-home"></i> Home</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#"><i class= "fa fa-user"></i> Profile</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#hello"><i class="fa fa-home"></i> Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#profile"><i class= "fa fa-user"></i> Profile</a></li>
                   <!-- <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-cog"></i> Services</a></li> -->
                   <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-suitcase"></i> Portfolio</a></li>
                   <!-- <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-newspaper-o"></i> Blog</a></li> -->
@@ -54,7 +54,7 @@
     <div class="container-fluid">
 
       <!-- row 0 -->
-      <div class="row odd-row">
+      <div class="row odd-row"  id="hello">
         <section class="col-sm-6 content-div-center">
           <div>
             <img class="img-responsive fi-header" src="images\ma_DSC0628.jpg" alt="Attila Krupl"></img>
@@ -73,20 +73,20 @@
       </div> <!-- row 0 -->
 
       <!-- row 1 -->
-      <div class="row even-row">
-        <section class="col-sm-4 some-upper-padding">
+      <div class="row" id="profile">
+        <section class="col-sm-4">
           <div class="profile-description">
-            <h1 class="fi-header">PROFILE</h1>
+            <h2 class="fi-header">PROFILE</h1>
             </div>
         </section>
-        <section class="col-sm-4 content-div-center some-upper-padding">
+        <section class="col-sm-4 content-div-center">
           <div class="profile-description">
             <p class="fi-paragraph justified-paragraph">I'm Attila Krüpl, software engineer, web enthusiast, science addict.</p>
             <p class="fi-paragraph justified-paragraph">I work as a C++ software engineer. I can be the part time team member of your developer team if you are looking for someone with experience in C++/Qt software development or web development.</p>
             <p class="fi-paragraph justified-paragraph">If you are a student or you are going to high school I can prepare you for your math exams.</p>
           </div>
         </section>
-        <section class="col-sm-4 content-div-center some-upper-padding">
+        <section class="col-sm-4 content-div-center">
           <div class="profile-description">
             <p class="fi-paragraph justified-paragraph">In 2009 I graduated as a lawyer. Since then I gained a significant experience in managing people in Great Britain, learned IT with engineering at the University of Szeged, learned web development at Green Fox Academy - Budapest, and did a plenty of other trainings and courses to become a software engineer.</p>
             <p class="fi-paragraph justified-paragraph">For more information about my experience, studies and interests please see my profile below.</p>
@@ -124,6 +124,11 @@
       $(document).ready(function(){
         $(".fi-header").fadeIn(500);
         $(".fi-paragraph").fadeIn(1200);
+      });
+
+      $(document).on('click','.navbar-collapse',function(e) {
+
+          $(this).collapse('hide');
 
       });
     </script>

@@ -3,7 +3,6 @@ body
     font-family: 'EB Garamond', sans-serif;
     font-size: 18px;
     background-color: #cccccc;
-    padding-top: 80px;
 }
 
 footer
@@ -94,9 +93,9 @@ a.nav-link
   text-align: justify;
 }
 
-.some-upper-padding
+.row
 {
-  padding-top: 30px;
+  padding-top: 80px;
 }
 
 .odd-row
@@ -104,12 +103,13 @@ a.nav-link
   background-color: #cccccc;
 }
 
-.even-row
-{
-
-}
 
 .wp-background
 {
   background-image: url(../images/nature-wall.jpg);
+}
+
+h2
+{
+  margin-top: 0px;
 }
