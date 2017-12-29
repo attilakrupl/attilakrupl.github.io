@@ -3,6 +3,16 @@ body
     font-family: 'EB Garamond', sans-serif;
     font-size: 18px;
     background-color: #cccccc;
+    color: rgb(10,10,10);
+}
+
+.navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-collapse>li>a, .navbar-inverse .navbar-brand {
+    color: rgb(220,220,220);
+}
+
+.navbar-inverse .navbar-toggle .icon-bar
+{
+  border-color: rgb(220,220,220);
 }
 
 footer
@@ -64,12 +74,6 @@ a.nav-link
   font-size:20px;
 }
 
-.profile-description
-{
-  text-align: left;
-  margin: 0 auto;
-}
-
 .fill-screen
 {
   background-size: cover;
@@ -95,7 +99,7 @@ a.nav-link
 
 .row
 {
-  padding-top: 80px;
+  padding-top: 79px;
 }
 
 .odd-row
@@ -106,11 +110,18 @@ a.nav-link
 
 .wp-background
 {
-  background-image: url(../images/nature-wall2.jpg);
+  background-image: linear-gradient(rgba(255,255,255,0.4),rgba(255,255,255,0.4)), url(../images/nature-wall2.jpg);
   background-attachment: fixed;
 }
 
 h2
 {
   margin-top: 0px;
+}
+
+.content-font
+{
+  padding-left: 15px;
+  padding-right:15px;
+  font-size: 1.2em;
 }
