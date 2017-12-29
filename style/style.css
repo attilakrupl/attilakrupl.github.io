@@ -4,6 +4,7 @@ body
     font-size: 18px;
     background-color: #cccccc;
     color: rgb(10,10,10);
+    display: absolute;
 }
 
 footer
@@ -96,7 +97,7 @@ footer
 
 .wp-background
 {
-  background-image: linear-gradient(rgba(255,255,255,0.4),rgba(255,255,255,0.4)), url(../images/nature-wall2.jpg);
+  background-image: url(../images/nature-wall2-dark.jpg);
   background-attachment: fixed;
 }
 
@@ -110,4 +111,29 @@ h2
   padding-left: 15px;
   padding-right:15px;
   font-size: 1.2em;
+}
+
+.content-font-wall
+{
+  padding-left: 15px;
+  padding-right:15px;
+  font-size: 1.2em;
+  color: white;
+}
+
+.down-button
+{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+
+.down-button i
+{
+  color: black;
+}
+
+.contact-me>p>i
+{
+  color: white;
 }

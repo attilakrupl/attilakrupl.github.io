@@ -33,7 +33,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">ATTILA KRÜPL dr.</a>
+                <a class="navbar-brand" href="#hello">ATTILA KRÜPL dr.</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -41,10 +41,8 @@
                 <ul class="nav navbar-nav navbar-right">
                   <li class="nav-item"><a class="nav-link" href="#hello"><i class="fa fa-home"></i> Home</a></li>
                   <li class="nav-item"><a class="nav-link" href="#profile"><i class= "fa fa-user"></i> Profile</a></li>
-                  <!-- <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-cog"></i> Services</a></li> -->
-                  <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-suitcase"></i> Portfolio</a></li>
-                  <!-- <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-newspaper-o"></i> Blog</a></li> -->
-                  <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-address-book"></i> Contact</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#portfolio"><i class="fa fa-suitcase"></i> Portfolio</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#contact"><i class="fa fa-address-book"></i> Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -54,7 +52,7 @@
     <div class="container-fluid">
 
       <!-- row 0 -->
-      <div class="row odd-row"  id="hello">
+      <div class="row first-row"  id="hello">
         <section class="col-sm-2">
         </section>
         <section class="col-sm-4 content-div-center">
@@ -72,24 +70,29 @@
             <p class="fi-paragraph justified-paragraph">For more information about my experience, studies and interests please see my profile below.</p>
           </div>
         </section>
+        <!-- <div class="down-button">
+          <a class="btn" href="#profile">
+            <i class="fa fa-arrow-circle-down fa-4x"> </i>
+          </a>
+        </div> -->
       </div> <!-- row 0 -->
 
       <!-- row 1 -->
       <div class="row fill-screen wp-background" id="profile">
         <section class="col-sm-2">
-          <div class="content-font">
+          <div class="content-font-wall">
             <h2 class="fi-header">PROFILE</h1>
             </div>
         </section>
         <section class="col-sm-4 content-div-center">
-          <div class="content-font">
+          <div class="content-font-wall">
             <p class="fi-paragraph justified-paragraph">I'm Attila Krüpl, software engineer, web enthusiast, science addict.</p>
             <p class="fi-paragraph justified-paragraph">I work as a C++ software engineer. I can be the part time team member of your developer team if you are looking for someone with experience in C++/Qt software development or web development.</p>
             <p class="fi-paragraph justified-paragraph">If you are a student or you are going to high school I can prepare you for your math exams.</p>
           </div>
         </section>
         <section class="col-sm-4 content-div-center">
-          <div class="content-font">
+          <div class="content-font-wall">
             <p class="fi-paragraph justified-paragraph">In 2009 I graduated as a lawyer. Since then I gained a significant experience in managing people in Great Britain, learned IT with engineering at the University of Szeged, learned web development at Green Fox Academy - Budapest, and did a plenty of other trainings and courses to become a software engineer.</p>
             <p class="fi-paragraph justified-paragraph">For more information about my experience, studies and interests please see my profile below.</p>
           </div>
@@ -97,16 +100,47 @@
       </div> <!-- row 1 -->
 
 
-
-
-
-
-
-
+      <!-- row 2 -->
+      <div class="row" id="portfolio">
+        <section class="col-sm-2">
+        </section>
+        <section class="col-sm-4 content-div-center">
+          <div>
+            <img class="img-responsive fi-header" src="images\ma_DSC0628.jpg" alt="Attila Krupl"></img>
+          </div>
+        </section>
+        <section class="col-sm-4 content-div-center">
+          <div class="content-font">
+            <h1 class="fi-header">HELLO,</h1>
+            <p class="fi-paragraph justified-paragraph">I'm Attila Krüpl, software engineer, web enthusiast, science addict.</p>
+            <p class="fi-paragraph justified-paragraph">I work as a C++ software engineer. I can be the part time team member of your developer team if you are looking for someone with experience in C++/Qt software development or web development.</p>
+            <p class="fi-paragraph justified-paragraph">If you are a student or you are going to high school I can prepare you for your math exams.</p>
+            <p class="fi-paragraph justified-paragraph">In 2009 I graduated as a lawyer. Since then I gained significant experience in managing people in Great Britain, learned IT with engineering at the University of Szeged, learned web development at Green Fox Academy - Budapest, and did a plenty of other trainings and courses to become a software engineer.</p>
+            <p class="fi-paragraph justified-paragraph">For more information about my experience, studies and interests please see my profile below.</p>
+          </div>
+        </section>
+      </div> <!-- row 2 -->
     </div> <!-- class="container-fluid" -->
 
     <footer class="container-fluid">
+      <!-- row 3 -->
+      <div class="row" id="contact">
+        <section class="col-sm-4">
+        </section>
 
+        <section class="col-sm-4 content-div-center">
+          <div class="contact-me content-font-wall">
+            <h2>CONTACT ME</h2>
+            <p class="fi-paragraph justified-paragraph">
+              <a href="https://www.facebook.com/krupl.attila" target="_blank"><i class="fa fa-facebook-f"></i></a>
+              <a href="https://twitter.com/csillagpor1" target="_blank"><i class="fa fa-twitter"></i></a>
+              <a href="https://github.com/attilakrupl" target="_blank"><i class="fa fa-github"></i></a>
+            </p>
+          </div>
+        </section>
+        <section class="col-sm-4">
+        </section>
+      </div> <!-- row 3 -->
     </footer>
 
     <script src="./scripts/classie.js" type="text/javascript"></script>
@@ -115,6 +149,11 @@
       $(function () {
         $(window).on("load resize", function () {
           $(".fill-screen").css("width", window.innerWidth);
+          $(".down-button").css("top", ($("first-row").innerHeight))
+        });
+
+        $('body').scrollspy({
+          target:'.navbar'
         });
       });
 
@@ -126,6 +165,7 @@
       $(document).on('click','.navbar-collapse',function(e) {
           $(this).collapse('hide');
       });
+
     </script>
   </body>
 </html>
