@@ -97,7 +97,7 @@ footer
 
 .wp-background
 {
-  background-image: url(../images/nature-wall2-dark.jpg);
+  /* background-image: url(../images/nature-wall2-dark.jpg); */
   background-attachment: fixed;
 }
 
@@ -124,14 +124,6 @@ h2
   padding-right:15px;
   font-size: 1.2em;
   color: white;
-}
-
-.down-button
-{
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  margin-bottom: 5px;
 }
 
 .down-button i
