@@ -105,17 +105,27 @@ footer
   background-color: #cccccc;
 }
 
+.wp-fixed-attachment
+{
+  background-attachment: fixed;
+}
 
 .wp-profile-background
 {
   background-image: url(../images/profile.jpg);
-  background-attachment: fixed;
 }
 
 .wp-portfolio-background
 {
   background-image: url(../images/blueprint.jpg);
-  background-attachment: fixed;
+}
+
+@media (max-width: 1024px)
+{
+  .wp-fixed-attachment
+  {
+    background-attachment: scroll;
+  }
 }
 
 h1
