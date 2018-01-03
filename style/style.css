@@ -74,7 +74,7 @@ footer
 
  }
 
- .content-font-wall h4
+ .content-font-wall h4, .content-font h4
  {
    text-align: left;
    font-family: 'Encode Sans Expanded', sans-serif;
@@ -109,11 +109,6 @@ footer
 .row-dark
 {
   background-color: #222222;
-}
-
-.odd-row
-{
-  background-color: #cccccc;
 }
 
 .wp-fixed-attachment
@@ -167,7 +162,7 @@ h1, h2, .navbar
   font-weight: bolder;
 }
 
-.content-font
+.content-font, .content-font-wall
 {
   padding-left: 15px;
   padding-right:15px;
@@ -176,9 +171,6 @@ h1, h2, .navbar
 
 .content-font-wall
 {
-  padding-left: 15px;
-  padding-right:15px;
-  font-size: 1.2em;
   color: white;
 }
 
@@ -215,4 +207,15 @@ h1, h2, .navbar
 {
   font-weight: bold;
   font-size: 35px;
+}
+
+.ref-img
+{
+  border: 1px solid #222222;
+}
+
+.logo-icon
+{
+  width: 30px;
+  height: 30px;
 }
