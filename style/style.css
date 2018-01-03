@@ -69,15 +69,19 @@ footer
  .content-div-center
  {
    display: flex;
+   align-items: center;
+   justify-content: center;
 
  }
 
- .content-div-center h4
+ .content-font-wall h4
  {
    text-align: left;
    font-family: 'Encode Sans Expanded', sans-serif;
    font-weight: 100;
    font-size: 30px;
+   padding-top: 30px;
+   padding-bottom: 40px;
  }
 
 .fi-header, .fi-paragraph, .fi-name
