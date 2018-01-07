@@ -106,12 +106,12 @@ body
 
 .wp-profile-background
 {
-  background-image: url(../images/profile.jpg);
+  background-image: url(../../images/profile.jpg);
 }
 
 .wp-portfolio-background
 {
-  background-image: url(../images/blueprint.jpg);
+  background-image: url(../../images/blueprint.jpg);
 }
 
 @media (max-width: 1024px)
