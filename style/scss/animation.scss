@@ -2,12 +2,12 @@ $bg: #fff;
 $text: #ddd;
 $hover: darken($bg, 10%);
 
-.navbar-brand {
+.link-effect {
   color: #fff;
   transition: all .3s ease;
   &:hover {
-    text-shadow: 1px 1px 0 lighten($bg, 15%), 2px 2px 0 lighten($bg, 10%), 3px 3px 0 lighten($bg, 5%);
-    transform: translate(-3px,-3px);
+    text-shadow: 1px 1px 0 lighten($bg, 15%);
+    transform: translate(-1px,-1px);
   }
 }
 
@@ -23,7 +23,7 @@ a, a > span {
   }
 }
 
-.contact-link-effect {
+.name-effect {
   padding: 10px;
   &:before, &:after {
     left: 0;
@@ -43,5 +43,21 @@ a, a > span {
   }
   &:hover:before, &:hover:after {
     transform:  scale(1, 1);
+  }
+}
+
+.link-image-effect
+{
+  transition: all 1s ease;
+  &:hover {
+    transform: translate(-10px,-10px);
+  }
+}
+
+.link-contact-fa-effect
+{
+  transition: all .2s ease;
+  &:hover {
+    transform: translate(-3px,-3px);
   }
 }
