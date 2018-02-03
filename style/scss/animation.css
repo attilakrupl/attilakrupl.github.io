@@ -36,7 +36,7 @@ a, a > span {
 .link-image-effect {
   transition: all 1s ease; }
   .link-image-effect:hover {
-    transform: translate(-10px, -10px); }
+    transform: translate(-10px, -10px) ; }
 
 .link-contact-fa-effect {
   transition: all .2s ease; }

@@ -1,17 +1,14 @@
 body
 {
-    font-family: 'Alegreya Sans', sans-serif;
-    font-size: 18px;
-    background-color: #cccccc;
-    color: rgb(10,10,10);
-    position: relative;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 18px;
+  background-color: #cccccc;
+  color: rgb(10,10,10);
+  /* position: relative; */
 }
 
-
-/* colors of the navbar texts and toggle button*/
-
 .navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-collapse>li>a, .navbar-inverse .navbar-brand {
-    color: rgb(220,220,220);
+  color: rgb(220,220,220);
 }
 
 .navbar-inverse .navbar-toggle .icon-bar
@@ -54,23 +51,23 @@ body
   background-position: center;
 }
 
- .content-div-center
- {
-   display: flex;
-   align-items: center;
-   justify-content: center;
+.content-div-center
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
- }
+}
 
- .content-font-wall h4, .content-font h4
- {
-   text-align: left;
-   font-family: 'Encode Sans Expanded', sans-serif;
-   font-weight: 100;
-   font-size: 30px;
-   padding-top: 30px;
-   padding-bottom: 40px;
- }
+.content-font-wall h4, .content-font h4
+{
+  text-align: left;
+  font-family: 'Encode Sans Expanded', sans-serif;
+  font-weight: 100;
+  font-size: 30px;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
 
 .fi-header, .fi-paragraph, .fi-name
 {
@@ -206,13 +203,23 @@ h1, h2, .navbar
   margin-right: 20px;
 }
 
+.ref-container img {
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.41);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.41);
+  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.41);
+}
+.ref-container img:hover
+{
+  -webkit-box-shadow: 5px 5px 5px 5px rgba(50,76,105,0.41);
+  -moz-box-shadow: 5px 5px 5px 5px rgba(50,76,105,0.41);
+  box-shadow: 5px 5px 5px 5px rgba(50,76,105,0.41);
+}
+
 .logo-icon
 {
   width: 30px;
   height: 30px;
 }
-
-/* Row styling */
 
 .row-contact
 {
