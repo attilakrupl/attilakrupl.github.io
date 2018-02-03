@@ -17,7 +17,7 @@ $(function () {
   });
 
   // // parallax scrolling with stellar.js
-  // $(window).stellar();
+  $(window).stellar();
   new WOW().init();
 });
 
