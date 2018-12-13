@@ -96,6 +96,16 @@ body
   background-color: #222222;
 }
 
+.row-light-background
+{
+  /* background-color: white; */
+}
+
+.row-profile-font
+{
+  color: black;
+}
+
 .wp-fixed-attachment
 {
   background-attachment: fixed;
@@ -154,7 +164,7 @@ h1, h2, .navbar
   font-size: 1.2em;
 }
 
-.content-font-wall
+.section-header-font
 {
   color: white;
 }
